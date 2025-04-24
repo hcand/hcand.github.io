@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_62d973fccb6d40b2c4e2b28e1d9050bf {
+                #map_ab8d0643dbce55d4493b825def96ce6d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,19 +39,19 @@
 <body>
     
     
-            <div class="folium-map" id="map_62d973fccb6d40b2c4e2b28e1d9050bf" ></div>
+            <div class="folium-map" id="map_ab8d0643dbce55d4493b825def96ce6d" ></div>
         
 </body>
 <script>
     
     
-            var map_62d973fccb6d40b2c4e2b28e1d9050bf = L.map(
-                "map_62d973fccb6d40b2c4e2b28e1d9050bf",
+            var map_ab8d0643dbce55d4493b825def96ce6d = L.map(
+                "map_ab8d0643dbce55d4493b825def96ce6d",
                 {
-                    center: [39.0, 32.0],
+                    center: [39.0, 33.0],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 10,
+  "zoom": 6,
   "zoomControl": true,
   "preferCanvas": false,
 }
@@ -63,7 +63,7 @@
 
         
     
-            var tile_layer_d450150f6def060761330a538e1b5f09 = L.tileLayer(
+            var tile_layer_0be06617f8bf77745180df928a5a6ba5 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -80,7 +80,101 @@
             );
         
     
-            tile_layer_d450150f6def060761330a538e1b5f09.addTo(map_62d973fccb6d40b2c4e2b28e1d9050bf);
+            tile_layer_0be06617f8bf77745180df928a5a6ba5.addTo(map_ab8d0643dbce55d4493b825def96ce6d);
+        
+    
+            var tile_layer_1d8c31f21e3c2b6d0bfe7913f68e3a04 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1d8c31f21e3c2b6d0bfe7913f68e3a04.addTo(map_ab8d0643dbce55d4493b825def96ce6d);
+        
+    
+            var tile_layer_a8d17b652d36aa54c530b0e9fd3f1199 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a8d17b652d36aa54c530b0e9fd3f1199.addTo(map_ab8d0643dbce55d4493b825def96ce6d);
+        
+    
+            var tile_layer_b44cc9b23124e7402095ae54aad3d014 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b44cc9b23124e7402095ae54aad3d014.addTo(map_ab8d0643dbce55d4493b825def96ce6d);
+        
+    
+            var layer_control_d3ecefffcf57da1243d2985a77cd6a1d_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_0be06617f8bf77745180df928a5a6ba5,
+                    "cartodbpositron" : tile_layer_1d8c31f21e3c2b6d0bfe7913f68e3a04,
+                    "cartodbdarkmatter" : tile_layer_a8d17b652d36aa54c530b0e9fd3f1199,
+                    "esriworldimagery" : tile_layer_b44cc9b23124e7402095ae54aad3d014,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_d3ecefffcf57da1243d2985a77cd6a1d = L.control.layers(
+                layer_control_d3ecefffcf57da1243d2985a77cd6a1d_layers.base_layers,
+                layer_control_d3ecefffcf57da1243d2985a77cd6a1d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_ab8d0643dbce55d4493b825def96ce6d);
+
+        
+    
+            tile_layer_0be06617f8bf77745180df928a5a6ba5.addTo(map_ab8d0643dbce55d4493b825def96ce6d);
+        
+    
+            tile_layer_1d8c31f21e3c2b6d0bfe7913f68e3a04.addTo(map_ab8d0643dbce55d4493b825def96ce6d);
+        
+    
+            tile_layer_a8d17b652d36aa54c530b0e9fd3f1199.addTo(map_ab8d0643dbce55d4493b825def96ce6d);
+        
+    
+            tile_layer_b44cc9b23124e7402095ae54aad3d014.addTo(map_ab8d0643dbce55d4493b825def96ce6d);
         
 </script>
 </html>
